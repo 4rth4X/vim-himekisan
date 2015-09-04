@@ -25,7 +25,7 @@ set noswapfile
 Bundle 'flazz/vim-colorschemes'
 let hour = strftime("%H")
 if 0 <= hour && hour < 7
-  set background=dark
+  set background=light
 else
   set background=dark
 endif
