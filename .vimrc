@@ -1,20 +1,20 @@
-
 set nocompatible
 filetype off
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#rc()
-Bundle 'gmarik/vundle'
+Bundle 'gmarik/Vundle.vim'
 
 Bundle 'tpope/vim-surround'
 Bundle 'kien/ctrlp.vim'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'gcmt/breeze.vim'
 Bundle 'SirVer/ultisnips'
-Bundle 'bling/vim-airline'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
 Bundle 'altercation/vim-colors-solarized'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 set number
 set cursorline
@@ -31,6 +31,8 @@ else
   set background=dark
 endif
 colorscheme solarized
+let g:solarized_termcolors=256
+let g:solarized_termtrans=1
 """"""""""""""""""
 if has('autocmd')
   filetype plugin indent on
@@ -77,7 +79,7 @@ let g:syntastic_check_on_open=1
 let g:syntastic_check_on_wq=0
 "Airline-vim"""""
 let g:airline_powerline_fonts=1
-let g:airline_theme='badwolf'
+let g:airline_theme='solarized'
 let g:airline#extensions#tabline#enabled=1
 "CtrlP""""""""""""
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/* 
